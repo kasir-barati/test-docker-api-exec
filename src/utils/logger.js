@@ -1,7 +1,5 @@
-require('winston-mongodb');
 const winston = require('winston');
-
-// const Axios = require('./axios');
+require('winston-mongodb');
 
 class Logger {
     constructor (name) { 
@@ -34,10 +32,7 @@ class Logger {
     debug(log, metadata) { this._logger.debug(log, metadata) };
     info(log, metadata) { this._logger.info(log, metadata) };
     warn(log, metadata) { this._logger.warn(log, metadata) };
-    error(log, metadata) {
-        this._logger.error(log, metadata);
-        // send WhatsApp message
-    };
+    error(log, metadata) { this._logger.error(log, metadata) };
 };
 
 module.exports = Logger;
